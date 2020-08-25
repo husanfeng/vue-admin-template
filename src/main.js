@@ -14,7 +14,15 @@ import router from './router'
 
 import '@/icons' // icon
 import '@/permission' // permission control
+import Highchart from 'highcharts/highcharts'
+import HighchartsVue from 'highcharts-vue'
+import stockInit from 'highcharts/modules/stock'
 
+stockInit(Highchart)
+Vue.use(HighchartsVue)
+
+import BrokenLineChart from '@/components/Charts/BrokenLineChart/index'
+Vue.use(BrokenLineChart)
 /**
  * If you don't want to use mock-server
  * you want to use MockJs for mock api
